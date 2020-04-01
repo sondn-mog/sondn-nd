@@ -8,7 +8,8 @@ console.log(mongo);
 
 app.get('/', (req, res, next) => {
     res.send("Hello world duoc roi nhe anh em");
-    req.db.collection('test').find({}).toArray(function(err, user){
+    req.db.collection('users').insertOne({name: 'sondn2', age: '21'})
+    req.db.collection('users').find({}).toArray(function(err, user){
         console.log(user);
     });
 });
